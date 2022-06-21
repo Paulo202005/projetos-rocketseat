@@ -1,0 +1,235 @@
+<!--
+  HTML - Hypertext Markup Language
+  https://developer.mozilla.org/
+
+  Anatomia das Tags 
+    - Abertura da tag
+    - fechamento da tag
+    - Conteúdo
+    - Elementos ou elementos vazios
+    - <h1>Titulo</h1>
+
+  Atributos HTML
+    - Informações extras
+    - Configurações
+    - <img src="conteudo" alt="texto alternativo">
+
+  Atributos booleanos
+    - Não precisam de conteúdo
+    - <input type="text" disabled>
+
+  Atributos Globais (Aplicado em todas as Tags)
+    - class
+    - contenteditable
+    - data-*
+    - hidden
+    - id
+    - style
+    - tabindex
+    - title
+
+  Conteúdo do Texto
+    - </br> (pular linha)
+    - &nbsp; (colocar espaço em branco)
+    - &lt; (coloca <)
+    - &gt; (coloca >)
+    - &amp; (coloca &)
+    - &quot; (coloca ")
+    - &apos; (coloca ')
+
+  Listas
+    - Ordenadas (ol) - numerada (1,2,3...)
+    - Não ordenadas (ul) - marcador (.)
+    - Exemplo
+      - <h1>Bolo</h1>
+        <h2>Ingredientes</h2>
+        <ol>
+          <l1>Farinha</li>
+          <li>Açucar</l1>
+        </ol>
+
+  Citações
+    - <blockquote>
+    - <cite>
+    - <q>    
+      <blockquote  cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/blockquote">
+        <p>
+          O <strong>Elemento HTML <code>&lt;blockquote&gt;</code></strong>
+          (ou <em>HTML Block Quotation Element</em>)
+          indica que um texto externo foi citado.
+        </p> 
+        <p>
+          De acordo com <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/blockquote">
+            <cite>página MDN blockquote</cite></a>
+        </p>
+        <p>
+          O elemento quote - <code>&lt;q&gt;</code> - é <q 
+          cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/q">
+          usado para citações curtas que não precisam de parágrafos ou quebras de linha.</q>
+          -- <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/">
+          <cite>MDN q page</cite></a>
+        </p>
+  </blockquote>
+
+  Abreviações
+    - <abbr>    
+      <p>
+        Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para
+        estruturar nossos documentos da web.
+      </p>
+      
+  Detalhes de contato
+    - <address>
+      <p>
+        Paulo Argenton </br>
+        <strong>Santo André, SP</strong>
+      </p>
+
+  Lista de descrição
+    - <dl> ... <dt> ... <dd>
+      <h2>Glossário</h2>
+      <dl>
+        <dt>Hypertext</dt>
+        <dd>É um hiper texto com possibilidades...</dd>
+
+        <dt>Markup</dt>
+        <dd>Marcação do Texto</dd>
+      </dl>
+
+  Representando códigos de computador
+    - <code> - Partes genéricas de código
+    - <pre>  - Blocos de código, pois essa tag mantém os espaços em
+               brancos e recuos que eu colocar no meu código
+      <pre>
+        <code>
+          document
+            .querySelector("body")
+        </code>
+      </pre>
+
+  Elementos genéricos
+    - <div> (Agrupar conteúdos - bloco)
+    - <span> (Agrupar textos - linha)
+      <div class="cart">
+        <span>Camiseta</span>
+        <span>R$ 99,00</span>
+      </div>
+      
+  Hyperlinks - elemento âncora <a>
+    - Atributos
+      - globais (title, id, class, etc)
+        <a href="http://google.com" title="Ir para o google">
+          <h1>Google</h1>
+          <p>Browser</p>
+          <img src="https://source.unsplash.com/" alt="Imagem do google">
+        </a>
+      - href
+        - para onde iremos, quando clicamos no link?
+          - url completa
+            <a href="http://google.com">google</a>
+          - fragmento
+            <a href="#usuario">usuario</a>
+            <h2 id="usuario">Usuário</h2>
+          - email
+            <a href="mailto:paulo.argenton@gmail.com">Paulo Argenton</a>
+          - telefone
+            <a href="tel:+5511998887766">Rocketseat</a>           
+          - outros
+      - download
+      - target
+        - _self (padrão - não precisa colocar) - (Troca a página)
+          <a href="http://google.com">Google</a>
+        - _blank (abre uma nova página)
+          <a href="http://google.com" target="_blank">Google</a>
+    - URLs e caminhos dos arquivos
+      - Uniform Resource Locator
+        https://www.rocketset.com.br
+      - URL usam caminhos para encontrar arquivos
+        <a href="http://google.com">google</a>
+      - Caminhos dos arquivos
+        - Explorador de arquivos
+          - mesmo diretório
+            <a href="indexnovo.html">Abrir página</a>
+          - entrando em diretórios
+            <a href="outros/indexnovo.html">Abrir página</a>
+          - saindo de diretórios
+            <a href="../indexnovo.html">Abrir página</a>
+          - diretório raiz (root ou pai)
+            <a href="./indexnovo.html">Abrir página</a>
+      - URLs absolutos versus relativos
+        - absolutos (sempre apontará para o mesmo local)
+          <a href="http://google.com">google</a>
+        - relativos (apontará para lugares diferentes)
+          <a href="google.com">google</a>                                                                         
+
+  Tabelas
+    Prós
+    - Visualização de dados via linhas e colunas.
+    - Boa acessibilidade para leitura de dados.
+    Contras
+    - Pouco flexível.
+    - Precisa de estilização para melhor visualização.
+    - Não usar para criar seu layout.
+    Tabela básica
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+      </tr>
+      <tr>
+        <td>Paulo</td>
+        <td>52</td>
+      </tr>
+    </table>
+
+    Tabela organizada
+    <table>
+      <caption>Pessoas por idade</caption>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paulo</td>
+          <td>52</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td>Total:</td>
+        <td>1 pessoa</td>
+      </tfoot>    
+    </table>
+  
+  Cabeçalho
+  - Head ( <head> ) - Configurações do HTML
+    - <meta>
+      Atributos
+      - charset (codificação de caracteres especiais)
+        <meta charset="UTF-8">
+      - name (portabiidade para dispositivos mobiles)
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      - content
+    - <link> (para ícones personalizados)
+      - favicon básico
+        <link rel="icon" href="/icons/icon-48x48.png?v=cfca599cb367ccaf7377d56ddc7542f5"/>
+    - Meta SEO - Search Engine Optimization (motores de busca = google)
+      - charset
+      - viewport
+      - author
+        <meta name="author" content="Paulo Argenton">
+      - description
+        <meta name="description" content="Um website para iniciantes em programação">
+      - robots
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="robots" content="index,follow">
+    - Meta Social (Redes sociais)
+      - Open Graph - facebook
+        <meta property="og:image" content="https://cdn-images-1.medium.com/max/92/00000.jpeg">
+        <meta property="og:description" content="Aqui vem um texto para ser mostrado ao compartilhar no facebook">
+        <meta property="og:title" content="Um site da Rocketseat">
+      - twitter
+        <meta name="twitter:title" content="Rocketseat"
+-->     
